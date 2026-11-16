@@ -7,7 +7,6 @@
     <meta name="keywords" content="" />
     <meta name="generator" content="nopCommerce" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="manifest" href="/icons/icons_0/site.webmanifest">
@@ -21,6 +20,94 @@
     <meta name="description" content="Câu lạc bộ Cơ Xương Khớp Thúy Đằng thuộc Trung tâm Chăm sóc Sức khỏe Người cao tuổi Yuzankai, phường Liêm Tuyền, tỉnh Ninh Bình. Tận tâm chăm sóc – Khơi nguồn sức sống.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* Hiệu ứng chữ ánh vàng kim sang trọng */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 45%, #F9EEB6 70%, #B88E24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 20px rgba(212, 175, 55, 0.25);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #DFBE52 0%, #C59B27 50%, #E5C865 100%);
+}
+
+  .bg-gold-gradient:hover {
+    background: linear-gradient(135deg, #E8CA68 0%, #D4AF37 50%, #F3E5AB 100%);
+  }
+
+.bg-emerald-radial {
+  background: radial-gradient(circle at 50% 35%, #0D5E49 0%, #063B2C 55%, #032219 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+/* Hiệu ứng nhịp thở nhẹ cho nút nổi */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+
+  70% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 2px solid #D4AF37;
+  animation: pulse-ring 2.2s infinite;
+}
+
+
+/* =========================================
+   MÀN HÌNH CHỜ TỐI GIẢN
+   ========================================= */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #072A21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+  .page-loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+.loader-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid rgba(229, 193, 88, 0.2);
+  border-top-color: #E5C158;
+  animation: spinLoader 0.8s linear infinite;
+}
+
+@keyframes spinLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+    </style>
 </head>
 <body class="bg-cream text-slate-800 font-sans antialiased selection:bg-gold-primary selection:text-emerald-deep">
     <!-- MÀN HÌNH CHỜ TỐI GIẢN -->
