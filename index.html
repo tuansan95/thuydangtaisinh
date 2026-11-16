@@ -1,0 +1,1101 @@
+@{
+    Layout = "_Root.Head";
+}
+
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thúy Đằng Tái Sinh - CLB Cơ Xương Khớp | Trung tâm Yuzankai Ninh Bình</title>
+    <meta name="description" content="Câu lạc bộ Cơ Xương Khớp Thúy Đằng thuộc Trung tâm Chăm sóc Sức khỏe Người cao tuổi Yuzankai, phường Liêm Tuyền, tỉnh Ninh Bình. Tận tâm chăm sóc – Khơi nguồn sức sống.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts hỗ trợ tiếng Việt đẹp & sang trọng -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            deep: '#042A20',
+                            dark: '#063B2C',
+                            medium: '#0A4D3C',
+                            light: '#136F58',
+                            soft: '#EBF5F2'
+                        },
+                        gold: {
+                            primary: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA8219',
+                            cream: '#FBF6E6'
+                        },
+                        cream: '#FAF9F6'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="~/css/page/style.css" rel="stylesheet" />
+</head>
+<body class="bg-cream text-slate-800 font-sans antialiased selection:bg-gold-primary selection:text-emerald-deep">
+    <!-- MÀN HÌNH CHỜ TỐI GIẢN -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-ring"></div>
+    </div>
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="sticky top-0 z-50 bg-emerald-deep/95 backdrop-blur-md border-b border-gold-subtle shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Thương Hiệu -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <!-- SVG Hoa Sen Vàng -->
+                    <div class="w-11 h-11 rounded-full bg-emerald-medium border border-gold-primary/60 flex items-center justify-center p-1.5 group-hover:scale-105 transition-transform">
+                        <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
+                            <path d="M32 10C32 10 24 22 24 32C24 38 28 43 32 45C36 43 40 38 40 32C40 22 32 10 32 10Z" stroke="#F3E5AB" stroke-width="2.2" fill="rgba(212, 175, 55, 0.15)" />
+                            <path d="M24 32C18 26 11 25 11 25C11 25 12 36 20 42C24 45 29 46 32 46" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                            <path d="M40 32C46 26 53 25 53 25C53 25 52 36 44 42C40 45 35 46 32 46" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                            <path d="M16 38C10 36 5 38 5 38C5 38 10 46 21 48C26 49 32 48 32 48" stroke="#F3E5AB" stroke-width="1.8" stroke-linecap="round" />
+                            <path d="M48 38C54 36 59 38 59 38C59 38 54 46 43 48C38 49 32 48 32 48" stroke="#F3E5AB" stroke-width="1.8" stroke-linecap="round" />
+                            <path d="M22 52C26 54 38 54 42 52" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-gold-light font-serif font-bold text-xl tracking-wide leading-none">THÚY ĐẰNG</div>
+                        <span class="text-emerald-100/80 text-xs tracking-wider uppercase mt-1">CLB Cơ Xương Khớp</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-8 text-base font-medium text-emerald-50">
+                    <a href="#van-de" class="hover:text-gold-light transition-colors py-2">Dấu Hiệu</a>
+                    <a href="#giai-phap" class="hover:text-gold-light transition-colors py-2">3 Trụ Cột</a>
+                    <a href="#phuong-phap" class="hover:text-gold-light transition-colors py-2">Phương Pháp</a>
+                    <a href="#uu-diem" class="hover:text-gold-light transition-colors py-2">Về Yuzankai</a>
+                    <a href="#quy-trinh" class="hover:text-gold-light transition-colors py-2">Lộ Trình</a>
+                    <a href="#cam-nhan" class="hover:text-gold-light transition-colors py-2">Hội Viên</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-3">
+                    <a href="#dang-ky" class="bg-gold-gradient text-emerald-deep font-bold text-sm sm:text-base px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-gold-primary/30 transition-all transform hover:-translate-y-0.5">
+                        Đăng Ký Tư Vấn
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Mở menu" class="lg:hidden text-gold-light p-2.5 rounded-xl border border-gold-subtle hover:bg-emerald-medium focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-emerald-dark border-t border-gold-subtle px-4 pt-3 pb-6 space-y-2">
+            <a href="#van-de" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-50 hover:bg-emerald-medium hover:text-gold-light">Dấu hiệu xương khớp</a>
+            <a href="#giai-phap" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-50 hover:bg-emerald-medium hover:text-gold-light">3 Trụ cột chăm sóc</a>
+            <a href="#uu-diem" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-50 hover:bg-emerald-medium hover:text-gold-light">Không gian Yuzankai</a>
+            <a href="#quy-trinh" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-50 hover:bg-emerald-medium hover:text-gold-light">Quy trình 4 bước</a>
+            <a href="#cam-nhan" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-50 hover:bg-emerald-medium hover:text-gold-light">Cảm nhận hội viên</a>
+            <a href="#lien-he" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-emerald-50 hover:bg-emerald-medium hover:text-gold-light">Địa điểm & Bản đồ</a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative bg-emerald-radial text-white overflow-hidden pt-12 pb-24 sm:pt-16 sm:pb-32">
+        <!-- Họa tiết hoa sen trang trí hai bên (SVG nghệ thuật) -->
+        <svg class="hidden md:block absolute left-0 bottom-12 w-72 h-72 opacity-25 pointer-events-none" viewBox="0 0 200 200" fill="none">
+            <path d="M40 160C40 110 80 70 110 50C105 90 95 130 40 160Z" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.08)" />
+            <path d="M30 165C20 120 40 75 65 45C70 85 65 130 30 165Z" stroke="#F3E5AB" stroke-width="1.5" />
+            <path d="M50 165C85 145 125 120 150 90C120 95 80 115 50 165Z" stroke="#D4AF37" stroke-width="1.5" />
+            <circle cx="115" cy="42" r="4" fill="#F3E5AB" />
+        </svg>
+
+        <svg class="hidden md:block absolute right-0 top-12 w-80 h-80 opacity-20 pointer-events-none transform scale-x-[-1]" viewBox="0 0 200 200" fill="none">
+            <path d="M40 160C40 110 80 70 110 50C105 90 95 130 40 160Z" stroke="#D4AF37" stroke-width="1.5" fill="rgba(212,175,55,0.08)" />
+            <path d="M30 165C20 120 40 75 65 45C70 85 65 130 30 165Z" stroke="#F3E5AB" stroke-width="1.5" />
+            <path d="M50 165C85 145 125 120 150 90C120 95 80 115 50 165Z" stroke="#D4AF37" stroke-width="1.5" />
+        </svg>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Biểu tượng Hoa Sen Trên Cùng -->
+            <div class="flex items-center justify-center space-x-4 mb-5">
+                <span class="h-[1px] w-12 sm:w-24 bg-gradient-to-r from-transparent to-gold-primary"></span>
+                <svg class="w-12 h-10 text-gold-light" viewBox="0 0 64 50" fill="none">
+                    <path d="M32 6C32 6 24 18 24 28C24 34 28 38 32 40C36 38 40 34 40 28C40 18 32 6 32 6Z" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M24 28C17 21 10 21 10 21C10 21 12 32 20 38C24 41 29 41 32 41" stroke="#D4AF37" stroke-width="1.8" />
+                    <path d="M40 28C47 21 54 21 54 21C54 21 52 32 44 38C40 41 35 41 32 41" stroke="#D4AF37" stroke-width="1.8" />
+                    <path d="M15 34C8 33 4 36 4 36C4 36 10 43 21 44C26 44 32 43 32 43" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M49 34C56 33 60 36 60 36C60 36 54 43 43 44C38 44 32 43 32 43" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+                <span class="h-[1px] w-12 sm:w-24 bg-gradient-to-l from-transparent to-gold-primary"></span>
+            </div>
+
+            <!-- Tên CLB -->
+            <p class="text-gold-light font-semibold tracking-[0.2em] uppercase text-sm sm:text-base mb-3">
+                Câu Lạc Bộ Cơ Xương Khớp Thúy Đằng
+            </p>
+
+            <!-- Tiêu đề chính lớn -->
+            <h1 class="font-serif font-bold text-5xl sm:text-6xl md:text-7xl tracking-wide text-gold-gradient leading-tight mb-3">
+                THÚY ĐẰNG TÁI SINH
+            </h1>
+
+            <!-- Đường lụa vàng uốn lượn dưới tiêu đề -->
+            <div class="max-w-md mx-auto mb-5">
+                <svg viewBox="0 0 400 24" fill="none" class="w-full h-5">
+                    <path d="M10 18C110 2 290 2 390 18" stroke="url(#goldLine)" stroke-width="2.5" stroke-linecap="round" />
+                    <circle cx="200" cy="6" r="3.5" fill="#F3E5AB" />
+                    <defs>
+                        <linearGradient id="goldLine" x1="10" y1="12" x2="390" y2="12" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#D4AF37" stop-opacity="0" />
+                            <stop offset="0.5" stop-color="#F3E5AB" />
+                            <stop offset="1" stop-color="#D4AF37" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Slogan -->
+            <p class="font-serif italic text-2xl sm:text-3xl text-gold-light/95 mb-10">
+                “Tận tâm chăm sóc – Khơi nguồn sức sống”
+            </p>
+
+            <!-- 3 Biểu tượng Tròn Viền Vàng giống Banner -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 max-w-3xl mx-auto mb-12">
+                <!-- Icon 1 -->
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-emerald-deep/40 border border-gold-subtle backdrop-blur-sm">
+                    <div class="w-16 h-16 rounded-full border-2 border-gold-primary flex items-center justify-center mb-3 bg-emerald-medium/60 text-gold-light shadow-inner">
+                        <i class="fa-solid fa-person-walking text-2xl"></i>
+                    </div>
+                    <h2 class="font-bold text-sm sm:text-base tracking-wider uppercase text-gold-light">Tập Luyện<br>Khoa Học</h2>
+                </div>
+
+                <!-- Icon 2 -->
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-emerald-deep/40 border border-gold-subtle backdrop-blur-sm">
+                    <div class="w-16 h-16 rounded-full border-2 border-gold-primary flex items-center justify-center mb-3 bg-emerald-medium/60 text-gold-light shadow-inner">
+                        <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h2 class="font-bold text-sm sm:text-base tracking-wider uppercase text-gold-light">Chăm Sóc<br>Sức Khỏe Chủ Động</h2>
+                </div>
+
+                <!-- Icon 3 -->
+                <div class="flex flex-col items-center p-4 rounded-2xl bg-emerald-deep/40 border border-gold-subtle backdrop-blur-sm">
+                    <div class="w-16 h-16 rounded-full border-2 border-gold-primary flex items-center justify-center mb-3 bg-emerald-medium/60 text-gold-light shadow-inner">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </div>
+                    <h2 class="font-bold text-sm sm:text-base tracking-wider uppercase text-gold-light">Kết Nối<br>Cộng Đồng</h2>
+                </div>
+            </div>
+
+            <!-- Thông điệp đồng hành -->
+            <p class="text-lg sm:text-xl text-emerald-50 font-medium max-w-2xl mx-auto mb-8 leading-relaxed">
+                Đồng hành cùng bạn và người thân xây dựng thói quen sống khỏe, dẻo dai xương khớp mỗi ngày tại <span class="text-gold-light font-semibold">Trung tâm Chăm sóc Sức khỏe Người cao tuổi Yuzankai</span>.
+            </p>
+
+            <!-- Cụm Nút Kêu Gọi Hành Động (CTA) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#dang-ky" class="w-full sm:w-auto bg-gold-gradient text-emerald-deep font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-gold-primary/40 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-calendar-check text-xl"></i>
+                    <span>Đặt Lịch Trải Nghiệm Buổi Đầu 0Đ</span>
+                </a>
+                <a href="tel:0782577866" class="w-full sm:w-auto bg-emerald-deep/80 hover:bg-emerald-medium text-gold-light border-2 border-gold-primary/70 font-semibold text-lg px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Gọi Tư Vấn: 0782.577.866</span>
+                </a>
+            </div>
+
+            <!-- Địa chỉ ngắn gọn -->
+            <p class="mt-8 text-sm text-emerald-200/80">
+                <i class="fa-solid fa-location-dot text-gold-primary mr-1.5"></i>
+                Khu Trung tâm Y tế chất lượng cao, phường Liêm Tuyền, tỉnh Ninh Bình
+            </p>
+        </div>
+
+        <!-- Dải lụa vàng lượn sóng chân Hero Section -->
+        <div class="absolute bottom-0 left-0 right-0 pointer-events-none">
+            <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none" class="w-full h-12 sm:h-20">
+                <path d="M0 40C320 95 620 -10 960 45C1180 80 1340 55 1440 30V90H0V40Z" fill="#FAF9F6" />
+                <path d="M0 36C320 91 620 -14 960 41C1180 76 1340 51 1440 26" stroke="#D4AF37" stroke-width="3" />
+                <path d="M0 44C340 96 640 -4 980 48C1190 80 1345 58 1440 35" stroke="#F3E5AB" stroke-width="1.5" stroke-opacity="0.7" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== PHẦN ĐỒNG CẢM (NỖI ĐAU BỆNH NHÂN) ==================== -->
+    <section id="van-de" class="py-16 sm:py-24 bg-cream">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-soft text-emerald-dark font-semibold text-sm tracking-wide uppercase mb-3">
+                    Lắng Nghe Cơ Thể
+                </span>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-emerald-dark leading-tight mb-4">
+                    Bạn hoặc người thân đang gặp phải những dấu hiệu này?
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Theo thời gian, hệ cơ xương khớp dần lão hóa. Việc nhận biết sớm và chăm sóc đúng phương pháp sẽ giúp ngăn ngừa tình trạng cứng khớp, hạn chế vận động.
+                </p>
+            </div>
+
+            <!-- 4 Thẻ Triệu Chứng -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Thẻ 1 -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-emerald-900/10 hover:border-gold-primary/60 hover:shadow-md transition-all flex items-start space-x-5">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-soft text-emerald-dark flex items-center justify-center shrink-0 text-2xl">
+                        <i class="fa-solid fa-user-injured"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-dark mb-2">Đau mỏi cổ vai gáy, tê bì tay</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">
+                            Vùng cổ gáy thường xuyên căng cứng, xoay đầu khó khăn, cơn đau lan xuống bả vai gây tê mỏi cánh tay, đặc biệt khi thời tiết thay đổi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Thẻ 2 -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-emerald-900/10 hover:border-gold-primary/60 hover:shadow-md transition-all flex items-start space-x-5">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-soft text-emerald-dark flex items-center justify-center shrink-0 text-2xl">
+                        <i class="fa-solid fa-bone"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-dark mb-2">Đau thắt lưng, thoát vị đĩa đệm</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">
+                            Đau âm ỉ hoặc nhói buốt vùng thắt lưng khi cúi gập người, đứng lên ngồi xuống, đi lại đường dài hoặc đau lan xuống vùng hông, chân.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Thẻ 3 -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-emerald-900/10 hover:border-gold-primary/60 hover:shadow-md transition-all flex items-start space-x-5">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-soft text-emerald-dark flex items-center justify-center shrink-0 text-2xl">
+                        <i class="fa-solid fa-person-cane"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-dark mb-2">Khô khớp, cứng khớp gối buổi sáng</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">
+                            Khớp gối phát ra tiếng kêu lục cục khi co duỗi, cảm giác nặng nề, sưng nhẹ hoặc ngại bước lên xuống cầu thang mỗi ngày.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Thẻ 4 -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-emerald-900/10 hover:border-gold-primary/60 hover:shadow-md transition-all flex items-start space-x-5">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-soft text-emerald-dark flex items-center justify-center shrink-0 text-2xl">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-emerald-dark mb-2">Mất ngủ, mệt mỏi do đau nhức</h3>
+                        <p class="text-base text-slate-600 leading-relaxed">
+                            Những cơn nhức mỏi về đêm khiến giấc ngủ chập chờn, tỉnh giấc giữa đêm, làm cơ thể suy nhược và tinh thần kém minh mẫn vào ban ngày.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hộp nhấn mạnh chuyển tiếp -->
+            <div class="mt-12 bg-gold-cream border border-gold-primary/40 rounded-3xl p-6 sm:p-8 text-center max-w-4xl mx-auto">
+                <p class="font-serif italic text-2xl sm:text-3xl text-emerald-dark font-semibold">
+                    “Đừng để những cơn đau nhức âm ỉ lấy đi niềm vui vận động. Sự phục hồi bền vững bắt đầu từ thói quen chăm sóc chủ động mỗi ngày.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3 TRỤ CỘT GIẢI PHÁP ==================== -->
+    <section id="giai-phap" class="py-16 sm:py-24 bg-emerald-dark text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-medium border border-gold-subtle text-gold-light font-semibold text-sm tracking-wide uppercase mb-3">
+                    Phương Pháp Toàn Diện
+                </span>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-gold-light leading-tight mb-4">
+                    3 Trụ Cột Chăm Sóc Tại Thúy Đằng
+                </h2>
+                <p class="text-lg text-emerald-100/90 leading-relaxed">
+                    Xây dựng dựa trên nền tảng khoa học vận động và tinh thần dưỡng sinh thanh tịnh, an toàn tuyệt đối cho người trung niên và cao tuổi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Trụ cột 1 -->
+                <div class="bg-emerald-deep/80 border border-gold-primary/40 rounded-3xl p-8 flex flex-col justify-between hover:border-gold-light transition-all shadow-xl">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-gradient text-emerald-deep flex items-center justify-center text-2xl font-bold mb-6 shadow-md">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <div class="text-gold-primary text-sm font-bold uppercase tracking-wider mb-2">Trụ cột 01</div>
+                        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-gold-light mb-4">
+                            Tập Luyện Phục Hồi Khoa Học
+                        </h3>
+                        <p class="text-emerald-100/85 text-base leading-relaxed mb-6">
+                            Các bài tập dưỡng sinh, kéo giãn cơ và vận động trị liệu được thiết kế cá nhân hóa theo từng vùng đau và thể trạng của mỗi hội viên.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 border-t border-gold-subtle pt-5 text-sm sm:text-base text-emerald-50">
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Giải phóng chèn ép vùng cổ, lưng, gối</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Tăng độ dẻo dai và giữ thăng bằng</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Cường độ nhẹ nhàng, không gây quá sức</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trụ cột 2 -->
+                <div class="bg-emerald-deep/80 border-2 border-gold-primary rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative transform lg:-translate-y-3">
+                    <div class="absolute -top-3.5 right-6 bg-gold-gradient text-emerald-deep text-xs font-bold uppercase px-3.5 py-1 rounded-full shadow">
+                        Cốt Lõi Tái Sinh
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-gradient text-emerald-deep flex items-center justify-center text-2xl font-bold mb-6 shadow-md">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <div class="text-gold-primary text-sm font-bold uppercase tracking-wider mb-2">Trụ cột 02</div>
+                        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-gold-light mb-4">
+                            Chăm Sóc Sức Khỏe Chủ Động
+                        </h3>
+                        <p class="text-emerald-100/85 text-base leading-relaxed mb-6">
+                            Kết hợp các liệu pháp thư giãn cơ sâu, đả thông tuần hoàn và tư vấn dinh dưỡng hỗ trợ nuôi dưỡng sụn khớp khỏe mạnh từ bên trong.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 border-t border-gold-subtle pt-5 text-sm sm:text-base text-emerald-50">
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Thư giãn bó cơ co cứng, giảm nhức mỏi</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Cải thiện lưu thông khí huyết, ngủ sâu giấc</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Hình thành nếp sống lành mạnh mỗi ngày</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trụ cột 3 -->
+                <div class="bg-emerald-deep/80 border border-gold-primary/40 rounded-3xl p-8 flex flex-col justify-between hover:border-gold-light transition-all shadow-xl">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-gradient text-emerald-deep flex items-center justify-center text-2xl font-bold mb-6 shadow-md">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="text-gold-primary text-sm font-bold uppercase tracking-wider mb-2">Trụ cột 03</div>
+                        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-gold-light mb-4">
+                            Kết Nối Cộng Đồng Sống Vui
+                        </h3>
+                        <p class="text-emerald-100/85 text-base leading-relaxed mb-6">
+                            Môi trường sinh hoạt ấm áp, văn minh dành cho các cô bác trung niên và cao tuổi cùng trò chuyện, chia sẻ và tiếp thêm động lực.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 border-t border-gold-subtle pt-5 text-sm sm:text-base text-emerald-50">
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Giao lưu bạn bè đồng trang lứa vui vẻ</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Xua tan cảm giác cô đơn, lo âu bệnh tật</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-gold-primary"></i>
+                            <span>Duy trì thói quen rèn luyện đều đặn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== PHƯƠNG PHÁP CHĂM SÓC ==================== -->
+    <section class="py-16 sm:py-24 bg-emerald-soft/60 border-y border-emerald-900/10" id="phuong-phap">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-head">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white text-emerald-dark font-semibold text-sm tracking-wide uppercase mb-3 shadow-sm">
+                    Y học cổ truyền &amp; công nghệ hỗ trợ
+                </span>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-emerald-dark leading-tight mb-6">
+                    PHƯƠNG PHÁP CHĂM SÓC
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Các phương pháp chỉ được áp dụng khi phù hợp với tình trạng, chỉ định và điều kiện chuyên môn.
+                </p>
+            </div>
+            <div>
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative mb-2">
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Đánh giá cá nhân hóa phác đồ</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Kiểm tra điểm co thắt, tầm vận động khớp và mức độ chèn ép dây thần kinh.
+                    </p>
+                </div>
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative mb-2">
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Sóng xung kích</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Sử dụng sóng năng lượng cao tác động sâu vào điểm xơ cứng, kích thích quá trình tự chữa lành, làm mềm mô cơ và giảm đau hiệu quả các chứng viêm gân, vôi hóa cơ xương khớp mạn tính.
+                    </p>
+                </div>
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative mb-2">
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Siêu âm trị liệu</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Tác động vi xoa bóp bằng sóng siêu âm tần số cao, giúp tăng tuần hoàn máu tại chỗ, làm mềm mô sẹo, giảm viêm và thúc đẩy quá trình tái tạo mô cơ, dây chằng nhanh chóng.
+                    </p>
+                </div>
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative mb-2">
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Điện xung trị liệu</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Ứng dụng dòng điện xung sinh học an toàn để kích thích thần kinh cơ, chặn tín hiệu đau truyền lên não, giải phóng co thắt và mang lại sự thư giãn sâu cho các nhóm cơ căng cứng.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== ĐIỂM KHÁC BIỆT (USP) & KHÔNG GIAN YUZANKAI ==================== -->
+    <section id="uu-diem" class="py-16 sm:py-24 bg-cream">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Cột hình ảnh minh họa không gian sang trọng -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+                             onerror="this.src='https://placehold.co/600x750/063B2C/F3E5AB?text=Kh%C3%B4ng+Gian+Yuzankai'"
+                             alt="Không gian tập luyện dưỡng sinh và chăm sóc sức khỏe người cao tuổi tại Yuzankai"
+                             class="w-full h-[420px] sm:h-[480px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-deep/90 via-emerald-deep/20 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <div class="inline-flex items-center gap-2 bg-gold-primary text-emerald-deep text-xs font-bold px-3 py-1 rounded-full mb-2">
+                                <i class="fa-solid fa-award"></i> CHUẨN CHĂM SÓC NHẬT BẢN
+                            </div>
+                            <p class="font-serif text-2xl font-bold text-gold-light">Trung tâm Chăm sóc Sức khỏe Người cao tuổi Yuzankai</p>
+                            <p class="text-sm text-emerald-100 mt-1">Phường Liêm Tuyền, tỉnh Ninh Bình</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột nội dung USP -->
+                <div class="lg:col-span-7">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-soft text-emerald-dark font-semibold text-sm tracking-wide uppercase mb-3">
+                        Vì Sao Chọn Thúy Đằng?
+                    </span>
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-emerald-dark leading-tight mb-6">
+                        An Tâm Trải Nghiệm Trong Không Gian Nghỉ Dưỡng Thanh Tịnh
+                    </h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                        Tọa lạc tại <strong>Khu Trung tâm Y tế chất lượng cao, phường Liêm Tuyền, tỉnh Ninh Bình</strong>, CLB Cơ Xương Khớp Thúy Đằng mang đến sự kết hợp hài hòa giữa chuyên môn phục hồi và sự tận tâm như người thân trong gia đình.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-dark text-gold-light flex items-center justify-center shrink-0 text-xl shadow">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-emerald-dark">Vị trí uy tín tại Trung tâm Yuzankai</h3>
+                                <p class="text-slate-600 text-base mt-1">Cơ sở vật chất khang trang, sạch sẽ, đảm bảo tiêu chuẩn an toàn và tiện nghi tối đa cho người lớn tuổi di chuyển.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-dark text-gold-light flex items-center justify-center shrink-0 text-xl shadow">
+                                <i class="fa-solid fa-user-nurse"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-emerald-dark">Hướng dẫn sát sao 1-1 tận tình</h3>
+                                <p class="text-slate-600 text-base mt-1">Đội ngũ chuyên viên giàu kinh nghiệm luôn theo sát từng động tác, điều chỉnh nhịp độ phù hợp với huyết áp và thể trạng từng bác.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-dark text-gold-light flex items-center justify-center shrink-0 text-xl shadow">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-emerald-dark">Không gian xanh thư thái, không áp lực</h3>
+                                <p class="text-slate-600 text-base mt-1">Thiết kế gần gũi thiên nhiên, hương thơm thảo mộc dịu nhẹ giúp tinh thần thư giãn ngay từ khi bước chân vào CLB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUY TRÌNH 4 BƯỚC THAM GIA ==================== -->
+    <section id="quy-trinh" class="py-16 sm:py-24 bg-emerald-soft/60 border-y border-emerald-900/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mx-auto mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white text-emerald-dark font-semibold text-sm tracking-wide uppercase mb-3 shadow-sm">
+                    Đơn Giản & Minh Bạch
+                </span>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-emerald-dark leading-tight mb-4">
+                    Quy Trình 4 Bước Tham Gia Câu Lạc Bộ
+                </h2>
+                <p class="text-lg text-slate-600">
+                    Thủ tục nhanh gọn, nhẹ nhàng để các cô bác dễ dàng bắt đầu hành trình chăm sóc sức khỏe.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Bước 1 -->
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative">
+                    <div class="w-12 h-12 rounded-full bg-gold-gradient text-emerald-deep font-serif font-bold text-2xl flex items-center justify-center mb-5 shadow">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Đăng Ký Lịch Hẹn</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Để lại số điện thoại trên trang hoặc gọi trực tiếp Hotline để chọn khung giờ thuận tiện nhất.
+                    </p>
+                </div>
+
+                <!-- Bước 2 -->
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative">
+                    <div class="w-12 h-12 rounded-full bg-gold-gradient text-emerald-deep font-serif font-bold text-2xl flex items-center justify-center mb-5 shadow">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Đánh Giá Thể Trạng</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Chuyên viên thăm hỏi thói quen sinh hoạt, kiểm tra độ linh hoạt các khớp và lắng nghe nhu cầu của bạn.
+                    </p>
+                </div>
+
+                <!-- Bước 3 -->
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative">
+                    <div class="w-12 h-12 rounded-full bg-gold-gradient text-emerald-deep font-serif font-bold text-2xl flex items-center justify-center mb-5 shadow">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Trải Nghiệm Buổi Đầu</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Tham gia trải nghiệm trị liệu miễn phí tại không gian Yuzankai.
+                    </p>
+                </div>
+
+                <!-- Bước 4 -->
+                <div class="bg-white rounded-3xl p-7 shadow-sm border border-emerald-900/10 relative">
+                    <div class="w-12 h-12 rounded-full bg-gold-gradient text-emerald-deep font-serif font-bold text-2xl flex items-center justify-center mb-5 shadow">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-dark mb-2">Đồng Hành Định Kỳ</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Nhận lộ trình sinh hoạt phù hợp và chính thức trở thành hội viên của đại gia đình Thúy Đằng.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CẢM NHẬN HỘI VIÊN ==================== -->
+    <section id="cam-nhan" class="py-16 sm:py-24 bg-cream">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-soft text-emerald-dark font-semibold text-sm tracking-wide uppercase mb-3">
+                    Niềm Vui Hội Viên
+                </span>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-emerald-dark leading-tight mb-4">
+                    Chia Sẻ Từ Các Cô Bác Tại Ninh Bình
+                </h2>
+                <p class="text-lg text-slate-600">
+                    Sự hài lòng và những bước chân vững vàng hơn mỗi ngày của hội viên là niềm tự hào lớn nhất của chúng tôi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Đánh giá 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-emerald-900/10 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-primary text-lg mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-base italic leading-relaxed mb-6">
+                            “Trước đây tôi bị đau thắt lưng và mỏi gối, đi bộ chỉ một đoạn ngắn là phải ngồi nghỉ. Từ ngày sinh hoạt tại CLB Thúy Đằng được các cháu hướng dẫn tập luyện đều đặn, người nhẹ nhõm hẳn, đêm ngủ ngon giấc hơn trước rất nhiều.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3.5 border-t border-slate-100 pt-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-dark text-gold-light font-serif font-bold text-xl flex items-center justify-center">
+                            H
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-emerald-dark text-base">Bác Nguyễn Văn Hùng (68 tuổi)</h4>
+                            <p class="text-sm text-slate-500">Hội viên tại Phủ Lý, Ninh Bình</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đánh giá 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-emerald-900/10 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-primary text-lg mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-base italic leading-relaxed mb-6">
+                            “Tôi rất thích không gian ở Yuzankai, sạch sẽ, yên tĩnh mà ấm cúng. Các bạn kỹ thuật viên nhẹ nhàng, kiên nhẫn chỉ từng động tác giãn cổ vai gáy. Đến đây vừa khỏe người vừa có thêm nhiều bạn bè cùng tuổi trò chuyện.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3.5 border-t border-slate-100 pt-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-dark text-gold-light font-serif font-bold text-xl flex items-center justify-center">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-emerald-dark text-base">Cô Trần Thị Mai (63 tuổi)</h4>
+                            <p class="text-sm text-slate-500">Hội viên tại Liêm Tuyền, Ninh Bình</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đánh giá 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-emerald-900/10 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-primary text-lg mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-base italic leading-relaxed mb-6">
+                            “Con gái đưa tôi tới đăng ký trải nghiệm thử, thấy cách chăm sóc rất khoa học và chu đáo nên tôi gắn bó luôn. Sáng nào dậy khớp tay khớp chân cũng linh hoạt, tinh thần phấn khởi hẳn lên.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3.5 border-t border-slate-100 pt-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-dark text-gold-light font-serif font-bold text-xl flex items-center justify-center">
+                            L
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-emerald-dark text-base">Bác Phạm Thị Lan (71 tuổi)</h4>
+                            <p class="text-sm text-slate-500">Hội viên tại Ninh Bình</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FORM ĐĂNG KÝ TRẢI NGHIỆM (LEAD FORM) ==================== -->
+    <section id="dang-ky" class="py-16 sm:py-24 bg-emerald-radial relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-emerald-deep/90 border-2 border-gold-primary rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl backdrop-blur-md">
+                <div class="text-center mb-8">
+                    <span class="inline-block px-4 py-1 rounded-full bg-gold-primary/20 border border-gold-primary/50 text-gold-light text-sm font-semibold uppercase tracking-wider mb-3">
+                        Ưu Đãi Dành Riêng Cho Hội Viên Mới
+                    </span>
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-gold-gradient mb-3">
+                        Đăng Ký Trải Nghiệm Buổi Đầu 0Đ
+                    </h2>
+                    <p class="text-emerald-100/90 text-base sm:text-lg max-w-2xl mx-auto">
+                        Để lại thông tin bên dưới, chuyên viên của <strong>CLB Cơ Xương Khớp Thúy Đằng</strong> sẽ liên hệ tư vấn và sắp xếp lịch đón tiếp chu đáo nhất.
+                    </p>
+                </div>
+
+                <form id="registration-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Họ và tên -->
+                        <div>
+                            <label for="fullname" class="block text-gold-light font-semibold text-base mb-2">
+                                Họ và tên của bạn / người thân <span class="text-red-400">*</span>
+                            </label>
+                            <input type="text"
+                                   id="fullname"
+                                   name="fullname"
+                                   required
+                                   placeholder="Ví dụ: Nguyễn Văn An"
+                                   class="w-full px-5 py-4 rounded-2xl bg-white text-slate-900 text-lg placeholder-slate-400 border-2 border-transparent focus:border-gold-primary focus:outline-none shadow-inner">
+                        </div>
+
+                        <!-- Số điện thoại -->
+                        <div>
+                            <label for="phone" class="block text-gold-light font-semibold text-base mb-2">
+                                Số điện thoại liên hệ <span class="text-red-400">*</span>
+                            </label>
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   required
+                                   pattern="[0-9]{9,11}"
+                                   placeholder="Ví dụ: 0912345678"
+                                   class="w-full px-5 py-4 rounded-2xl bg-white text-slate-900 text-lg placeholder-slate-400 border-2 border-transparent focus:border-gold-primary focus:outline-none shadow-inner">
+                        </div>
+                    </div>
+
+                    <!-- Chọn nhanh tình trạng đang gặp phải -->
+                    <div>
+                        <label class="block text-gold-light font-semibold text-base mb-3">
+                            Vấn đề cơ xương khớp đang quan tâm (Có thể chọn nhiều):
+                        </label>
+                        <div class="flex flex-wrap gap-3" id="symptom-tags">
+                            <button type="button" data-value="Đau cổ vai gáy" class="symptom-btn px-4 py-2.5 rounded-full border border-gold-primary/60 text-emerald-50 text-base font-medium hover:bg-gold-primary/20 transition-all">
+                                <i class="fa-solid fa-plus mr-1.5 text-xs"></i>Đau cổ vai gáy
+                            </button>
+                            <button type="button" data-value="Đau thắt lưng / Thoát vị" class="symptom-btn px-4 py-2.5 rounded-full border border-gold-primary/60 text-emerald-50 text-base font-medium hover:bg-gold-primary/20 transition-all">
+                                <i class="fa-solid fa-plus mr-1.5 text-xs"></i>Đau thắt lưng / Thoát vị
+                            </button>
+                            <button type="button" data-value="Đau cứng khớp gối" class="symptom-btn px-4 py-2.5 rounded-full border border-gold-primary/60 text-emerald-50 text-base font-medium hover:bg-gold-primary/20 transition-all">
+                                <i class="fa-solid fa-plus mr-1.5 text-xs"></i>Đau cứng khớp gối
+                            </button>
+                            <button type="button" data-value="Tê bì chân tay" class="symptom-btn px-4 py-2.5 rounded-full border border-gold-primary/60 text-emerald-50 text-base font-medium hover:bg-gold-primary/20 transition-all">
+                                <i class="fa-solid fa-plus mr-1.5 text-xs"></i>Tê bì chân tay
+                            </button>
+                            <button type="button" data-value="Tập dưỡng sinh khỏe người" class="symptom-btn px-4 py-2.5 rounded-full border border-gold-primary/60 text-emerald-50 text-base font-medium hover:bg-gold-primary/20 transition-all">
+                                <i class="fa-solid fa-plus mr-1.5 text-xs"></i>Tập dưỡng sinh khỏe người
+                            </button>
+                        </div>
+                        <input type="hidden" id="selected-symptoms" name="symptoms" value="">
+                    </div>
+
+                    <!-- Nút Submit lớn -->
+                    <div class="pt-2">
+                        <button type="submit" class="w-full bg-gold-gradient text-emerald-deep font-bold text-xl py-4.5 py-4 rounded-2xl shadow-xl hover:shadow-gold-primary/40 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                            <span>GỬI ĐĂNG KÝ NHẬN TƯ VẤN NGAY</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <p class="text-center text-sm text-emerald-200/80">
+                        <i class="fa-solid fa-shield-halved text-gold-primary mr-1"></i>
+                        Thông tin của quý khách được bảo mật tuyệt đối. Tư vấn hoàn toàn miễn phí.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER & BẢN ĐỒ ==================== -->
+    <footer id="lien-he" class="bg-emerald-deep text-emerald-100 border-t border-gold-subtle pt-16 pb-24 sm:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-gold-subtle">
+                <!-- Cột 1: Thông tin đơn vị -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-medium border border-gold-primary flex items-center justify-center text-gold-light">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-2xl text-gold-light">CLB Cơ Xương Khớp Thúy Đằng</h3>
+                            <p class="text-xs text-emerald-300 uppercase tracking-wider">Thúy Đằng Tái Sinh</p>
+                        </div>
+                    </div>
+                    <p class="text-base text-emerald-100/85 leading-relaxed">
+                        Trực thuộc <strong>Trung tâm Chăm sóc Sức khỏe Người cao tuổi Yuzankai</strong>. Nơi đồng hành cùng cộng đồng xây dựng thói quen sống khỏe, dẻo dai và an vui tuổi già.
+                    </p>
+                    <div class="space-y-3 pt-2 text-base">
+                        <p class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-gold-primary mt-1.5"></i>
+                            <span><strong>Địa chỉ:</strong> Khu Trung tâm Y tế chất lượng cao, phường Liêm Tuyền, tỉnh Ninh Bình</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-gold-primary"></i>
+                            <span><strong>Hotline:</strong> <a href="tel:0782577866" class="text-gold-light font-bold hover:underline">0782.577.866</a></span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fa-regular fa-clock text-gold-primary"></i>
+                            <span><strong>Giờ hoạt động:</strong> 07:30 – 17:30 (Thứ 2 – Chủ Nhật)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Liên kết nhanh -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-serif font-bold text-xl text-gold-light mb-4">Danh Mục</h4>
+                    <ul class="space-y-2.5 text-base">
+                        <li><a href="#van-de" class="hover:text-gold-light transition-colors">Dấu hiệu cơ xương khớp</a></li>
+                        <li><a href="#giai-phap" class="hover:text-gold-light transition-colors">3 Trụ cột chăm sóc</a></li>
+                        <li><a href="#uu-diem" class="hover:text-gold-light transition-colors">Không gian Yuzankai</a></li>
+                        <li><a href="#quy-trinh" class="hover:text-gold-light transition-colors">Quy trình 4 bước tham gia</a></li>
+                        <li><a href="#dang-ky" class="hover:text-gold-light transition-colors">Đăng ký trải nghiệm 0Đ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Bản đồ chỉ đường -->
+                <div class="lg:col-span-4">
+                    <h4 class="font-serif font-bold text-xl text-gold-light mb-4">Bản Đồ Chỉ Đường</h4>
+                    <div class="rounded-2xl overflow-hidden border border-gold-primary/40 h-52 bg-emerald-medium relative">
+                        <iframe title="Bản đồ vị trí phường Liêm Tuyền, Ninh Bình"
+                                src="https://www.google.com/maps?q=Vien+Duong+Lao+Nhat+Ban,+Liêm+Tuyền,+Phủ+Lý,+Hà+Nam&output=embed"
+                                class="w-full h-full border-0 opacity-90"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://maps.google.com/?q=Vien+Duong+Lao+Nhat+Ban,+Liêm+Tuyền,+Phủ+Lý,+Hà+Nam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-gold-light hover:underline mt-2.5">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                        <span>Mở chỉ đường trên Google Maps</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dòng miễn trừ trách nhiệm y tế theo đúng banner -->
+            <div class="pt-8 text-center space-y-2">
+                <p class="text-xs sm:text-sm text-emerald-300/70 pt-2">
+                    © 2026 Câu Lạc Bộ Cơ Xương Khớp Thúy Đằng – Trung tâm Chăm sóc Sức khỏe Người cao tuổi Yuzankai. Bảo lưu mọi quyền.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== NÚT GỌI NHANH & ZALO NỔI GÓC MÀN HÌNH ==================== -->
+    <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
+        <!-- Nút Zalo -->
+        <a href="https://zalo.me/0782577866" target="_blank" rel="noopener noreferrer" aria-label="Nhắn tin qua Zalo" class="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-xl flex flex-col items-center justify-center transition-transform hover:scale-105 border-2 border-white">
+            <span class="font-extrabold text-xs tracking-tighter leading-none">Zalo</span>
+            <span class="text-[10px] mt-0.5">Chat</span>
+        </a>
+
+        <!-- Nút Gọi Hotline -->
+        <a href="tel:0782577866" aria-label="Gọi ngay Hotline" class="relative pulse-ring w-14 h-14 rounded-full bg-gold-gradient text-emerald-deep shadow-xl flex items-center justify-center transition-transform hover:scale-105 border-2 border-white">
+            <i class="fa-solid fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <!-- ==================== MODAL THÔNG BÁO ĐĂNG KÝ THÀNH CÔNG ==================== -->
+    <div id="success-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border-2 border-gold-primary transform transition-all">
+            <div class="w-20 h-20 rounded-full bg-emerald-soft text-emerald-dark flex items-center justify-center mx-auto mb-5 text-4xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="font-serif font-bold text-3xl text-emerald-dark mb-3">
+                Đăng Ký Thành Công!
+            </h3>
+            <p id="modal-message" class="text-slate-600 text-base leading-relaxed mb-6">
+                Cảm ơn quý khách đã đăng ký trải nghiệm tại <strong>CLB Cơ Xương Khớp Thúy Đằng</strong>. Chuyên viên của chúng tôi sẽ gọi điện xác nhận lịch hẹn trong ít phút tới.
+            </p>
+            <button id="close-modal-btn" class="w-full bg-emerald-dark hover:bg-emerald-medium text-gold-light font-bold text-lg py-3.5 rounded-2xl transition-colors">
+                Đóng Thông Báo
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT XỬ LÝ TƯƠNG TÁC ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Xử lý đóng/mở Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // 2. Xử lý chọn nhanh các thẻ triệu chứng trong Form
+            const symptomBtns = document.querySelectorAll('.symptom-btn');
+            const hiddenSymptomsInput = document.getElementById('selected-symptoms');
+            const selectedSet = new Set();
+
+            symptomBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const value = btn.getAttribute('data-value');
+                    const icon = btn.querySelector('i');
+
+                    if (selectedSet.has(value)) {
+                        selectedSet.delete(value);
+                        btn.classList.remove('bg-gold-primary', 'text-emerald-deep', 'font-bold');
+                        btn.classList.add('text-emerald-50');
+                        if (icon) {
+                            icon.classList.remove('fa-check');
+                            icon.classList.add('fa-plus');
+                        }
+                    } else {
+                        selectedSet.add(value);
+                        btn.classList.add('bg-gold-primary', 'text-emerald-deep', 'font-bold');
+                        btn.classList.remove('text-emerald-50');
+                        if (icon) {
+                            icon.classList.remove('fa-plus');
+                            icon.classList.add('fa-check');
+                        }
+                    }
+
+                    hiddenSymptomsInput.value = Array.from(selectedSet).join(', ');
+                });
+            });
+
+            // 3. Xử lý gửi Form và hiển thị Modal xác nhận
+            const form = document.getElementById('registration-form');
+            const successModal = document.getElementById('success-modal');
+            const modalMessage = document.getElementById('modal-message');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    try {
+                        const name = document.getElementById('fullname').value.trim();
+                        const phone = document.getElementById('phone').value.trim();
+                        const symptoms = hiddenSymptomsInput.value;
+
+                        let detailHtml = `Cảm ơn <strong>${name}</strong> (SĐT: <strong>${phone}</strong>) đã đăng ký trải nghiệm tại <strong>CLB Cơ Xương Khớp Thúy Đằng</strong>.`;
+                        if (symptoms) {
+                            detailHtml += `<br><span class="text-sm text-emerald-700 mt-2 inline-block">Vấn đề quan tâm: ${symptoms}</span>`;
+                        }
+                        detailHtml += `<br><br>Chuyên viên tại Trung tâm Yuzankai sẽ liên hệ tư vấn cho quý khách trong thời gian sớm nhất!`;
+
+                        modalMessage.innerHTML = detailHtml;
+                        successModal.classList.remove('hidden');
+                        successModal.classList.add('flex');
+
+                        // Reset form và các tag đã chọn
+                        form.reset();
+                        selectedSet.clear();
+                        hiddenSymptomsInput.value = '';
+                        symptomBtns.forEach(btn => {
+                            btn.classList.remove('bg-gold-primary', 'text-emerald-deep', 'font-bold');
+                            btn.classList.add('text-emerald-50');
+                            const icon = btn.querySelector('i');
+                            if (icon) {
+                                icon.classList.remove('fa-check');
+                                icon.classList.add('fa-plus');
+                            }
+                        });
+                    } catch (error) {
+                        console.error('Lỗi khi xử lý đăng ký:', error);
+                    }
+                });
+            }
+
+            // Đóng modal khi bấm nút hoặc bấm ra ngoài khung
+            if (closeModalBtn && successModal) {
+                closeModalBtn.addEventListener('click', () => {
+                    successModal.classList.add('hidden');
+                    successModal.classList.remove('flex');
+                });
+
+                successModal.addEventListener('click', (e) => {
+                    if (e.target === successModal) {
+                        successModal.classList.add('hidden');
+                        successModal.classList.remove('flex');
+                    }
+                });
+            }
+        });
+                // Ẩn ngay lập tức khi trang vừa tải xong, không tạo độ trễ thừa
+        window.addEventListener('load', () => {
+            const pageLoader = document.getElementById('pageLoader');
+            if (pageLoader) {
+                pageLoader.classList.add('fade-out');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Menu Mobile Toggle siêu mượt
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNavDropdown = document.getElementById('mobileNavDropdown');
+
+            if (mobileMenuBtn && mobileNavDropdown) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isVisible = mobileNavDropdown.style.display === 'block';
+                    mobileNavDropdown.style.display = isVisible ? 'none' : 'block';
+                });
+
+                // Đóng menu khi bấm ra ngoài hoặc bấm vào link
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuBtn.contains(e.target) && !mobileNavDropdown.contains(e.target)) {
+                        mobileNavDropdown.style.display = 'none';
+                    }
+                });
+
+                mobileNavDropdown.querySelectorAll('.mob-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNavDropdown.style.display = 'none';
+                    });
+                });
+            }
+
+            // 2. Chọn nhanh triệu chứng
+            const symptomTags = document.querySelectorAll('.symptom-tag');
+            const selectedSymptomsInput = document.getElementById('selectedSymptoms');
+
+            symptomTags.forEach(tag => {
+                tag.addEventListener('click', () => {
+                    tag.classList.toggle('active');
+
+                    const activeTags = Array.from(document.querySelectorAll('.symptom-tag.active'))
+                                            .map(el => el.getAttribute('data-value'));
+                    if (selectedSymptomsInput) {
+                        selectedSymptomsInput.value = activeTags.join(', ');
+                    }
+                });
+            });
+
+            // 3. Xử lý form đăng ký (phản hồi tức thì)
+            const registrationForm = document.getElementById('registrationForm');
+            const modalMessage = document.getElementById('modalMessage');
+
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('fullName').value.trim();
+                    const phone = document.getElementById('phoneNumber').value.trim();
+                    const symptoms = selectedSymptomsInput ? selectedSymptomsInput.value : '';
+                    const submitBtn = registrationForm.querySelector('button[type="submit"]');
+
+                    // Kiểm tra số điện thoại cơ bản
+                    const phoneRegex = /^(0|\+84)[0-9]{8,10}$/;
+                    const cleanPhone = phone.replace(/\s+/g, '');
+                    if (!phoneRegex.test(cleanPhone)) {
+                        alert('Vui lòng nhập đúng số điện thoại liên hệ (10 số).');
+                        document.getElementById('phoneNumber').focus();
+                        return;
+                    }
+
+                    // Hiển thị trạng thái đang xử lý ngay lập tức
+                    const originalBtnText = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Đang xử lý...`;
+
+                    // Kích hoạt ngay Modal thành công không qua độ trễ ảo
+                    const symptomText = symptoms ? ` với nhu cầu tư vấn: <strong>${symptoms}</strong>` : '';
+                    if (modalMessage) {
+                        modalMessage.innerHTML = `Cảm ơn <strong>${name}</strong> đã đăng ký trải nghiệm tại <strong>CLB Cơ Xương Khớp Thúy Đằng</strong>${symptomText}. Chuyên viên sẽ gọi tới số <strong>${phone}</strong> trong ít phút tới.`;
+                    }
+
+                    const successModalElement = document.getElementById('successModal');
+                    if (successModalElement) {
+                        const modal = new bootstrap.Modal(successModalElement);
+                        modal.show();
+                    }
+
+                    // Khôi phục nút bấm & reset form
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                    registrationForm.reset();
+                    symptomTags.forEach(t => t.classList.remove('active'));
+                    if (selectedSymptomsInput) {
+                        selectedSymptomsInput.value = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
