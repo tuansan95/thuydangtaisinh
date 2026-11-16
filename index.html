@@ -970,116 +970,7 @@
 
     <!-- ==================== JAVASCRIPT XỬ LÝ TƯƠNG TÁC ==================== -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // 1. Xử lý đóng/mở Mobile Menu
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
-
-            // 2. Xử lý chọn nhanh các thẻ triệu chứng trong Form
-            const symptomBtns = document.querySelectorAll('.symptom-btn');
-            const hiddenSymptomsInput = document.getElementById('selected-symptoms');
-            const selectedSet = new Set();
-
-            symptomBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const value = btn.getAttribute('data-value');
-                    const icon = btn.querySelector('i');
-
-                    if (selectedSet.has(value)) {
-                        selectedSet.delete(value);
-                        btn.classList.remove('bg-gold-primary', 'text-emerald-deep', 'font-bold');
-                        btn.classList.add('text-emerald-50');
-                        if (icon) {
-                            icon.classList.remove('fa-check');
-                            icon.classList.add('fa-plus');
-                        }
-                    } else {
-                        selectedSet.add(value);
-                        btn.classList.add('bg-gold-primary', 'text-emerald-deep', 'font-bold');
-                        btn.classList.remove('text-emerald-50');
-                        if (icon) {
-                            icon.classList.remove('fa-plus');
-                            icon.classList.add('fa-check');
-                        }
-                    }
-
-                    hiddenSymptomsInput.value = Array.from(selectedSet).join(', ');
-                });
-            });
-
-            // 3. Xử lý gửi Form và hiển thị Modal xác nhận
-            const form = document.getElementById('registration-form');
-            const successModal = document.getElementById('success-modal');
-            const modalMessage = document.getElementById('modal-message');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-
-            if (form) {
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    try {
-                        const name = document.getElementById('fullname').value.trim();
-                        const phone = document.getElementById('phone').value.trim();
-                        const symptoms = hiddenSymptomsInput.value;
-
-                        let detailHtml = `Cảm ơn <strong>${name}</strong> (SĐT: <strong>${phone}</strong>) đã đăng ký trải nghiệm tại <strong>CLB Cơ Xương Khớp Thúy Đằng</strong>.`;
-                        if (symptoms) {
-                            detailHtml += `<br><span class="text-sm text-emerald-700 mt-2 inline-block">Vấn đề quan tâm: ${symptoms}</span>`;
-                        }
-                        detailHtml += `<br><br>Chuyên viên tại Trung tâm Yuzankai sẽ liên hệ tư vấn cho quý khách trong thời gian sớm nhất!`;
-
-                        modalMessage.innerHTML = detailHtml;
-                        successModal.classList.remove('hidden');
-                        successModal.classList.add('flex');
-
-                        // Reset form và các tag đã chọn
-                        form.reset();
-                        selectedSet.clear();
-                        hiddenSymptomsInput.value = '';
-                        symptomBtns.forEach(btn => {
-                            btn.classList.remove('bg-gold-primary', 'text-emerald-deep', 'font-bold');
-                            btn.classList.add('text-emerald-50');
-                            const icon = btn.querySelector('i');
-                            if (icon) {
-                                icon.classList.remove('fa-check');
-                                icon.classList.add('fa-plus');
-                            }
-                        });
-                    } catch (error) {
-                        console.error('Lỗi khi xử lý đăng ký:', error);
-                    }
-                });
-            }
-
-            // Đóng modal khi bấm nút hoặc bấm ra ngoài khung
-            if (closeModalBtn && successModal) {
-                closeModalBtn.addEventListener('click', () => {
-                    successModal.classList.add('hidden');
-                    successModal.classList.remove('flex');
-                });
-
-                successModal.addEventListener('click', (e) => {
-                    if (e.target === successModal) {
-                        successModal.classList.add('hidden');
-                        successModal.classList.remove('flex');
-                    }
-                });
-            }
-        });
-                // Ẩn ngay lập tức khi trang vừa tải xong, không tạo độ trễ thừa
+        // Ẩn ngay lập tức khi trang vừa tải xong, không tạo độ trễ thừa
         window.addEventListener('load', () => {
             const pageLoader = document.getElementById('pageLoader');
             if (pageLoader) {
@@ -1087,88 +978,80 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Menu Mobile Toggle siêu mượt
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileNavDropdown = document.getElementById('mobileNavDropdown');
+        const form = document.getElementById('registration-form');
+        const hiddenSymptomsInput = document.getElementById('selected-symptoms');
+        const symptomButtons = document.querySelectorAll('.symptom-btn');
+        const successModal = document.getElementById('success-modal');
+        const modalMessage = document.getElementById('modal-message');
 
-            if (mobileMenuBtn && mobileNavDropdown) {
-                mobileMenuBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const isVisible = mobileNavDropdown.style.display === 'block';
-                    mobileNavDropdown.style.display = isVisible ? 'none' : 'block';
-                });
+        // 1. Xử lý chọn/tắt triệu chứng
+        symptomButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const value = button.dataset.value;
+                const selected = new Set((hiddenSymptomsInput.value || '').split(',').filter(Boolean));
 
-                // Đóng menu khi bấm ra ngoài hoặc bấm vào link
-                document.addEventListener('click', (e) => {
-                    if (!mobileMenuBtn.contains(e.target) && !mobileNavDropdown.contains(e.target)) {
-                        mobileNavDropdown.style.display = 'none';
+                if (selected.has(value)) {
+                    selected.delete(value);
+                    button.classList.remove('bg-gold-primary', 'text-emerald-deep', 'font-bold');
+                    button.classList.add('text-emerald-50');
+
+                    const icon = button.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-check');
+                        icon.classList.add('fa-plus');
                     }
-                });
+                } else {
+                    selected.add(value);
+                    button.classList.add('bg-gold-primary', 'text-emerald-deep', 'font-bold');
+                    button.classList.remove('text-emerald-50');
 
-                mobileNavDropdown.querySelectorAll('.mob-link').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileNavDropdown.style.display = 'none';
-                    });
-                });
-            }
-
-            // 2. Chọn nhanh triệu chứng
-            const symptomTags = document.querySelectorAll('.symptom-tag');
-            const selectedSymptomsInput = document.getElementById('selectedSymptoms');
-
-            symptomTags.forEach(tag => {
-                tag.addEventListener('click', () => {
-                    tag.classList.toggle('active');
-
-                    const activeTags = Array.from(document.querySelectorAll('.symptom-tag.active'))
-                                            .map(el => el.getAttribute('data-value'));
-                    if (selectedSymptomsInput) {
-                        selectedSymptomsInput.value = activeTags.join(', ');
+                    const icon = button.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-check');
                     }
-                });
+                }
+
+                hiddenSymptomsInput.value = Array.from(selected).join(', ');
             });
+        });
 
-            // 3. Xử lý form đăng ký (phản hồi tức thì)
-            const registrationForm = document.getElementById('registrationForm');
-            const modalMessage = document.getElementById('modalMessage');
-
-            if (registrationForm) {
-                        form.addEventListener('submit', async function (e) {
+        // 2. Xử lý submit form
+        form.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const nameInput = form.querySelector('[name="fullname"]');
-            const phoneInput = form.querySelector('[name="phone"]');
-            const name = nameInput.value.trim();
-            const phone = phoneInput.value.trim();
+            const fullname = document.getElementById('fullname').value.trim();
+            const phone = document.getElementById('phone').value.trim();
 
-            if (!name) {
+            if (!fullname) {
                 alert('Vui lòng nhập họ và tên.');
-                nameInput.focus();
+                document.getElementById('fullname').focus();
                 return;
             }
 
             if (!/^[0-9]{9,11}$/.test(phone)) {
                 alert('Vui lòng nhập số điện thoại hợp lệ gồm 9–11 chữ số.');
-                phoneInput.focus();
+                document.getElementById('phone').focus();
                 return;
             }
 
             const submitButton = form.querySelector('button[type="submit"]');
             submitButton.disabled = true;
+            submitButton.innerHTML = '<span>Đang gửi...</span>';
 
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
                     body: new FormData(form),
-                    headers: { Accept: 'application/json' }
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
 
                 if (!response.ok) {
-                    throw new Error('Không gửi được đăng ký.');
+                    throw new Error('Formspree rejected request');
                 }
 
-                // Dùng textContent để tránh đưa dữ liệu người dùng vào HTML.
                 modalMessage.textContent =
                     'Cảm ơn quý khách đã đăng ký. Chuyên viên sẽ liên hệ trong thời gian sớm nhất.';
 
@@ -1176,10 +1059,8 @@
                 successModal.classList.add('flex');
 
                 form.reset();
-                selectedSet.clear();
                 hiddenSymptomsInput.value = '';
-
-                symptomBtns.forEach(btn => {
+                symptomButtons.forEach((btn) => {
                     btn.classList.remove('bg-gold-primary', 'text-emerald-deep', 'font-bold');
                     btn.classList.add('text-emerald-50');
 
@@ -1193,9 +1074,15 @@
                 alert('Gửi đăng ký chưa thành công. Vui lòng thử lại hoặc gọi hotline 0782.577.866.');
             } finally {
                 submitButton.disabled = false;
+                submitButton.innerHTML =
+                    '<span>GỬI ĐĂNG KÝ NHẬN TƯ VẤN NGAY</span><i class="fa-solid fa-arrow-right"></i>';
             }
         });
-            }
+
+        // 3. Đóng modal
+        document.getElementById('close-modal-btn').addEventListener('click', () => {
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
         });
     </script>
 </body>
